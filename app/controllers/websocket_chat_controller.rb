@@ -1,13 +1,8 @@
+
 class WebsocketChatController < WebsocketRails::BaseController
-  def initialize_session
-  end
-
-  def connect_user
-  end
-
   def message_recieve
-    reciveve_message = message()
+    recieve_message = message()
 
-    broadecast_message(:websocket_chat, recieve_message)
+    broadcast_message(:websocket_chat, recieve_message)
   end
 end
