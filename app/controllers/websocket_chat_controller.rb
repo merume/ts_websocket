@@ -1,4 +1,4 @@
-class WebsockerChatController < WebsocketRails::BaseController
+class WebsocketChatController < WebsocketRails::BaseController
   def initialize_session
   end
 
