@@ -1,13 +1,12 @@
 <h1>Chat</h1>
 
-<ul id="chat_area">
-</ul>
 
 <input id="comment" type="text">
 <input id="send" type="button" value="send">
-
+<ul id="chat_area">
+</ul>
 <script>
-  var ws_rails = new WebSocketRails("192.168.0.129:3000/websocket");
+  var ws_rails = new WebSocketRails("<%= request.host %>:<%= request.server_port %>/websocket");
   
   // receive message
   ws_rails.bind("websocket_chat", function(message){
