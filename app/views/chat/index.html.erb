@@ -14,8 +14,9 @@
 
     var message_li = document.createElement('li');
     message_li.textContent = message;
-
-    document.getElementById("chat_area").appendChild(message_li);
+    
+    $('ul#chat_area').prepend(message_li);
+    // document.getElementById("chat_area").appendChild(message_li);
   });
 
   // send message
@@ -24,6 +25,7 @@
 
     console.log(comment);
     ws_rails.trigger("websocket_chat", comment);
+    $('input#comment').val('');
   }
 </script>
 
